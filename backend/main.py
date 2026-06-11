@@ -56,7 +56,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "https://talos-assets-dashboard.vercel.app/",
+        "https://talos-assets-dashboard-2xxr.vercel.app/",
     ],
     allow_credentials=True,
     allow_methods=["*"],
