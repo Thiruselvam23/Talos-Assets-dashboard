@@ -1,0 +1,14 @@
+commands:
+uvicorn main:app --reload --port 8000 
+
+urls:
+http://localhost:8000/charts/branch/call-count
+http://localhost:8000/charts/branch/talk-time
+http://localhost:8000/charts/lang/call-count
+http://localhost:8000/charts/lang/talk-time
+http://localhost:8000/charts/lang/connected-count
+
+http://localhost:8000/charts/branch/call-count?branch=Coimbatore
+http://localhost:8000/charts/branch/call-count?dialer=tata
+http://localhost:8000/charts/lang/call-count?language=Tamil
+http://localhost:8000/charts/lang/connected-count?branch=Kochi&language=Malayalam

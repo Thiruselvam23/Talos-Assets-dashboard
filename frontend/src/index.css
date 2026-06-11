@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ── Design Tokens ─────────────────────────────────────────────────────── */
+:root {
+  --navy: #0f1e2e;
+  --navy-mid: #162436;
+  --navy-light: #1e3248;
+  --steel: #2a4a6b;
+  --blue: #2d7dd2;
+  --blue-bright: #4a9eff;
+  --blue-glow: rgba(45, 125, 210, 0.18);
+  --accent: #5bbfff;
+  --white: #ffffff;
+  --grey-100: #f0f4f8;
+  --grey-200: #d6e0ea;
+  --grey-400: #8da5be;
+  --grey-600: #4a6580;
+  --success: #34d399;
+  --card-bg: rgba(255, 255, 255, 0.04);
+  --card-border: rgba(255, 255, 255, 0.09);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --shadow-card: 0 4px 32px rgba(0, 0, 0, 0.35), 0 1px 0 rgba(255, 255, 255, 0.06) inset;
+  --shadow-hover: 0 8px 48px rgba(45, 125, 210, 0.22), 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+  --font-main: 'Sora', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Reset ─────────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--navy);
+  color: var(--white);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Background grid texture */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(45, 125, 210, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(45, 125, 210, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Scrollbar ─────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--navy-mid);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--steel);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue);
+}
+
+/* ── Utility ───────────────────────────────────────────────────────────── */
+.mono {
+  font-family: var(--font-mono);
+}
